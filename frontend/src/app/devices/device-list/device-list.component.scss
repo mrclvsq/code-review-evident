@@ -1,0 +1,21 @@
+.devices {
+  &__title {
+    font-size: 32px;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 16px;
+    font-style: italic;
+    text-shadow: 1px 1px white;
+    text-align: center;
+  }
+}
+
+.devices__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.devices--item {
+  width: calc(50% - 12px);
+}

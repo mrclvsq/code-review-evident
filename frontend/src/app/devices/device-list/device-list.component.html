@@ -1,0 +1,23 @@
+<h1 class="devices__title">Devices</h1>
+
+<div class="devices__filters">
+  <label>Filter by testing type : </label>
+  <select [(ngModel)]="selectedTestingType">
+    <ng-container *ngFor="let type of testingTypes;">
+      <option
+        [value]="type"
+        [selected]="'selected'"
+      >{{type}}</option>
+    </ng-container>
+  </select>
+</div>
+
+<div class="devices__list">
+  <li
+    class="devices--item"
+    [ngClass]="{'devices__item--has-date': !device.purchaseDate}"
+    *ngFor="let device of filteredDevices;"
+  >
+    <app-device [device]="device"></app-device>
+  </li>
+</div>
